@@ -1,0 +1,105 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+#toggle-theme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: rgb(217, 118, 13);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+  margin-top: 500px;
+}
+
+
+body.dark {
+  background:black!important;
+}
+
+
+ 
+body.dark #toggle-theme {
+  background-color: #444;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  background-image: none;
+}
+body.dark #menu {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+body.dark #menu:hover {
+  background-color: #555;
+}
+body.dark thead th {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark tbody tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+ body.dark #about {
+   background: #222;
+ }
+ 
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark a,
+body.dark figcaption {
+  color:rgb(134, 132, 132) !important;
+}
+ 
+body.dark img {
+  opacity: 0.9;
+}
+
+ 
+body.dark .title h2 {
+  color: #8be28b !important;
+}
+
+ 
+body.dark .btn {
+  background-color: #444 !important;
+  color: #fff !important;
+  border: 1px solid #666;
+}
+
+body.dark .btn:hover {
+  background-color: #242222 !important;
+}
+
+ 
+body.dark thead th {
+  background-color: #444 !important;
+}
+
+body.dark tbody tr:nth-child(even) {
+  background-color: #2a2a2a !important;
+}
+body.dark main,
+body.dark .container {
+  background: none !important;
+}

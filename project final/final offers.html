@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Special offers</title>
+    <link rel="icon" type="image/png" href="Final imgs/my logo.png">
+    <link rel="stylesheet" href="main8.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="offers-style.css">
+</head>
+
+<body>
+
+
+
+    <main>
+        <section id="offers">
+            <div class="container">
+                <div class="title">
+                    <h2>enjoy our special offers</h2>
+                    <p>More than 25+ years of experience</p>
+                </div>
+                <div class="offers-items">
+                    <div class="offer-card">
+                        <img src="Final imgs/73afe01d11463575076cc8aeb78da8d9-removebg-preview.png" alt="Super Saver">
+                        <div class="offer-info">
+                            <h3>Super Saver</h3>
+                            <p>2 Large Pizzas (choice of pepperoni or margherita)<br>2 Cans of Pepsi<br> Medium Fries</p>
+                            <p><del>$490.00</del><span class="price">$329.00</span></p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <img src="Final imgs/bernu-ballite_53029805-removebg-preview.png" alt="Hat-Trick Medium">
+                        <div class="offer-info">
+                            <h3>Hat-Trick Medium</h3>
+                            <p>3 Medium Pizzas (assorted toppings)<br>1 Garlic Bread<br>2 Donuts <br>1.5L Pepsi</p>
+                            <p><del>$702.00</del><span class="price">$469.00</span></p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <img src="Final imgs/7fe37f3cd63004154481a62979d2a966-removebg-preview.png" alt="Party Meal">
+                        <div class="offer-info">
+                            <h3>Party Meal</h3>
+                            <p>3 Large Pizzas (customizable)<br>1 Large Fries<br>1.5L Pepsi</p>
+                            <p><del>$923.00</del><span class="price">$649.00</span></p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <img src="Final imgs/puspusins_2476258656-removebg-preview.png" alt="Family Deal">
+                        <div class="offer-info">
+                            <h3>Family Deal</h3>
+                            <p>2 Large Veggie Pizzas<br>1.5L Pepsi<br>Optional: Add a dessert for a small charge</p>
+                            <p><del>$689.00</del><span class="price">$534.00</span></p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <img src="Final imgs/starta-komplekts_4182260343-removebg-preview.png" alt="Ranch Box">
+                        <div class="offer-info">
+                            <h3>Ranch Box</h3>
+                            <p>2 Medium Pizzas (one meat, one veggie)<br>1.5L Pepsi<br>Optional: Garlic dip or extra cheese</p>
+                            <p><del>$636.00</del><span class="price">$509.00</span></p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="cart-icon">
+        🛒 <span id="cart-count">0</span>
+      </div>
+      
+    <script src="final script.js"></script>
+    <script src="theme.js"></script>
+    
+ 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          let cartCount = 0;
+          const cartCountSpan = document.getElementById('cart-count');
+        
+          document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+              cartCount++;
+              cartCountSpan.textContent = cartCount;
+        
+              const itemName = button.closest('.offer-info').querySelector('h3').innerText;
+              showToast(`${itemName} added to cart!`);
+            });
+          });
+        
+          function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerText = message;
+            document.body.appendChild(toast);
+        
+            setTimeout(() => toast.classList.add('show'), 100);
+            setTimeout(() => {
+              toast.classList.remove('show');
+              setTimeout(() => toast.remove(), 500);
+            }, 2000);
+          }
+        });
+        </script>
+        
+      
+      
+
+</body>
+</html>

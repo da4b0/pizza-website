@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Feedback</title>
+    <link rel="icon" type="image/png" href="Final imgs/my logo.png">
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="main8.css">
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/67c66657c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="theme.css">
+
+</head>
+
+<body class="feedbackbody">
+    <section>
+        <div class="mycontainer">
+            <form id="feedbackForm">
+                <h1>Give Your Feedback</h1>
+
+                <!-- Name input -->
+                <div class="id">
+                    <input type="text" placeholder="Full name" required autofocus>
+                    <i class="far fa-user"></i>
+                </div>
+
+                <!-- Email input -->
+                <div class="id">
+                    <input type="email" placeholder="Email address" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <!-- Feedback textarea -->
+                <div class="id">
+                    <textarea name="feedback" id="feedback" rows="5" placeholder="Enter your opinion" required></textarea>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    <script>document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // stop the form from reloading the page
+                alert("Thanks for the feedback!");
+                this.reset(); // optional: clear form after submission
+            });
+        });</script>
+        <script src="theme.js"></script>
+
+</body>
+</html>
